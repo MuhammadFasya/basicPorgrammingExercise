@@ -10,3 +10,7 @@ study Program : Informatics Engineering
 Name : Akmal Zaidan Hibatullah
 Student Number: 20230040065
 Study Program: Informatics Engineering 
+
+Name : Rizki Maulana
+Student Number: 20230040035
+Study Program: Informatics Engineering 
