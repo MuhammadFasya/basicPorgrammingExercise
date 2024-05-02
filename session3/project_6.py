@@ -24,3 +24,5 @@ while True:
     #if the input is not number, show wrong input message and loop back to the input
     except ValueError:
         print("The input is wrong, please input a number.")
+        
+        

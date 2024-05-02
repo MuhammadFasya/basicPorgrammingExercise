@@ -10,7 +10,7 @@ age = int(input("Input Your Age: "))
 
 if age <= 12:
     print("Child")
-elif age > 13 and age < 20:
+elif age >= 13 and age <= 19:
     print("Teenager")
-elif age > 20:
+elif age >= 20:
     print("Adult")

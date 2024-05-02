@@ -1,10 +1,11 @@
 #Items name, price, and stock
-items= {
+items = {
     "Lipstick": {"price": 60000, "stock":5},
     "Powder": {"price":50000, "stock": 10},
     "Foundation": {"price":70000, "stock":6}
 }
-#Display avaible items
+
+#Display available items
 def show_items():
     print("-" * 30)
     print("Available Items:")
@@ -23,7 +24,9 @@ def purchase_item(item_name, quantity):
             # Update stock and calculate total price
             item_details["stock"] -= quantity
             total_price = item_details["price"] * quantity
+            profit = item_details["price"] * 0.1 * quantity  # Calculate profit (10% of original price)
             print(f"Successfully purchased {quantity} {item_name}(s) for a total of Rp{total_price}.")
+            print(f"Profit: Rp{profit}")
         else:
             print(f"Insufficient stock for {item_name}. Only {item_details['stock']} remaining.")
     else:
@@ -35,11 +38,11 @@ def show_summary():
     total_profit = 0
     for item_name, details in items.items():
         total_transactions += (items[item_name]["price"] * (items[item_name]["stock"] - details["stock"]))
-        total_profit += (items[item_name]["price"] * (items[item_name]["stock"] - details["stock"]))
+        total_profit += (items[item_name]["price"] * 0.1 * (items[item_name]["stock"] - details["stock"]))  # Update total profit calculation
     print("-" * 30)
     print("Summary:")
     print("-" * 30)
-    print(f"Total Transactions: {total_transactions}")
+    print(f"Total Transactions: Rp{total_transactions}")
     print(f"Total Profit: Rp{total_profit}")
 
 # Main program loop
@@ -68,4 +71,4 @@ while True:
         print("Invalid choice. Please try again.")
 
 print("-" * 30)
-print("Program Terminated"  )
+print("Program Terminated")
